@@ -85,15 +85,15 @@ class Application(tk.Tk):
                                         self.lineVar, 
                                         *self.lines)
         self.lineOption.grid(row=0, column=1, sticky="w")
+        self.lineoption = tk.OptionMenu(self.styleFrame, 
+                                          self.lineColorVar, 
+                                          *self.colors)
+        self.lineoption.grid(row=0, column=2, sticky="w")
         tk.Label(self.styleFrame, text="Marker").grid(row=1, column=0)
         self.markerOption = tk.OptionMenu(self.styleFrame, 
                                           self.markerVar, 
                                           *self.markers)
         self.markerOption.grid(row=1, column=1, sticky="w")
-        self.markerOption = tk.OptionMenu(self.styleFrame, 
-                                          self.lineColorVar, 
-                                          *self.colors)
-        self.markerOption.grid(row=0, column=2, sticky="w")
         self.markerOption = tk.OptionMenu(self.styleFrame, 
                                           self.markerColorVar, 
                                           *self.colors)
